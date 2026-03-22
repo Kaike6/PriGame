@@ -96,11 +96,8 @@ body {
 }
 
 /* ===== RESPONSIVO ===== */
-@media (max-width: 968px) {
+@media (max-width: 1068px) {
 
-    .hamburguer {
-        display: block;
-    }
 
     .menuLista {
         position: absolute;
