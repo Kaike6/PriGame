@@ -77,7 +77,7 @@ Pagar com Pix
 Voltar
 </Button>
 </div>
-
+<div className="comprar">
 <Button onClick={() => {
 
 const produtosAtuais =
@@ -98,6 +98,7 @@ navigate("/Compras")
 }}>
 Comprar
 </Button>
+</div>
 
 
 </div>
