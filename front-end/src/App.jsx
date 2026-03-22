@@ -1,5 +1,5 @@
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
-import Cadastro from "./pages/cadastro";
+import Cadastro from "./pages/Cadastro";
 import Menu from "./components/Menu";
 import Home from "./pages/Home";
 import Login from "./pages/Login";
