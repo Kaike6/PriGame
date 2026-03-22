@@ -1,0 +1,213 @@
+@import url('https://fonts.googleapis.com/css2?family=Bungee&display=swap');
+
+h1{
+    font-family: "Bungee", sans-serif;
+}
+
+main{
+    min-height: 100vh;
+}
+
+/* ===== HEADER SCROLL ===== */
+
+.homeHeader{
+    display: flex;
+    gap: 40px;
+    overflow-x: auto;
+    padding: 40px;
+    scrollbar-width: none;
+}
+
+.homeHeader::-webkit-scrollbar{
+    display: none;
+}
+
+
+/* imagens */
+.homeHeader img{
+    width: 22vw;
+    max-width: 900px;
+    height: 50vh;
+
+    object-fit: cover;
+    border-radius: 20px;
+
+    transition: 0.3s;
+    
+}
+
+
+/* efeitos */
+
+.god img:hover{
+    box-shadow: 0 0 50px rgb(158,158,235);
+}
+
+.moortal img:hover{
+    box-shadow: 0 0 50px rgb(184,162,18);
+}
+
+.gta img:hover{
+    box-shadow: 0 0 50px rgb(122,18,167);
+}
+
+.resid img:hover{
+    box-shadow: 0 0 50px white;
+}
+
+
+/* impedir scroll lateral */
+
+html, body{
+    overflow-x: hidden;
+}
+
+
+/* ===== TITULO ===== */
+
+.home h1{
+    text-align: center;
+    font-size: 40px;
+    color: white;
+    margin-top: 90px;
+    padding-top: 50px;
+}
+.home h2{
+    text-align: center;
+    font-size: 40px;
+    color: white;
+    padding-top: 30px;
+}
+
+
+
+.homeLista{
+    display: grid;
+    grid-template-columns: repeat(4, 260px);
+    justify-content: center;
+    gap: 40px;
+    margin-top: 50px;
+}
+
+.jogos h4{
+    text-align: center;
+    font-size: 50px;
+    color: white;
+    margin-right: 7%;
+        margin-top: 40px;
+}
+
+
+
+/* ===== GRID NORMAL (PC GRANDE) ===== */
+
+
+/* ============================= */
+/* NOTEBOOK */
+/* ============================= */
+/* ============================= */
+/* NOTEBOOK / PC MENOR */
+/* ============================= */
+@media (max-width: 1280px){
+
+    .homeLista{
+        grid-template-columns: repeat(3, 250px);
+    }
+
+}
+
+
+/* ============================= */
+/* TABLET */
+/* ============================= */
+@media (max-width: 1024px){
+
+    .homeHeader img{
+        width: 90vw;
+        height: 300px;
+    }
+
+    .homeLista{
+        grid-template-columns: repeat(2, 230px);
+        justify-content: center;
+    }
+        .pesquisa{
+        margin-right: 0;
+        display: flex;
+        justify-content: center;
+        margin-right: 25%;
+    }
+
+}
+
+
+/* ============================= */
+/* CELULAR GRANDE */
+/* ============================= */
+@media (max-width: 868px){
+
+    .homeHeader img{
+        width: 90vw;
+        height: 220px;
+    }
+
+    .home h1{
+        font-size: 32px;
+        text-align: center;
+    }
+
+    .pesquisa{
+        margin-right: 0;
+        display: flex;
+        justify-content: center;
+        margin-right: 25%;
+    }
+
+}
+
+
+/* ============================= */
+/* CELULAR */
+/* ============================= */
+@media (max-width: 540px){
+
+    .homeLista,
+    .jogos,
+    .jogosInvisivel{
+        grid-template-columns: 1fr;
+        justify-content: center;
+    }
+
+    .home h1{
+        font-size: 36px;
+        text-align: center;
+    }
+
+    .pesquisa{
+        width: 140px;
+        margin: 20px auto;
+    }
+
+    .homeHeader img{
+        width: 90vw;
+        height: 200px;
+    }
+
+}
+
+
+/* ============================= */
+/* CELULAR PEQUENO */
+/* ============================= */
+@media (max-width: 475px){
+
+    .home h1{
+        font-size: 28px;
+    }
+
+    .homeHeader img{
+        width: 85vw;
+        height: 190px;
+    }
+
+}

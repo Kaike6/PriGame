@@ -1,0 +1,26 @@
+.PesquisarJogo{
+    margin-left: 35%;
+    margin-top: 8%;
+    padding: 0;
+}
+
+.PesquisarJogo Label{
+    color: white;
+    font-size: 25px;
+    display: flex;
+ flex-direction: column;
+}
+
+.PesquisarJogo Input{
+    padding: 9px;
+        width: 350px;
+        font-size: 15px;
+
+}
+
+.PesquisarJogo Button{
+    padding: 9px;
+    width: 100px;
+            font-size: 15px;
+
+}

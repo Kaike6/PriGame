@@ -1,0 +1,66 @@
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Roboto', sans-serif;
+    background: linear-gradient(135deg, #000000, #00008b);
+    background-attachment: fixed; /* Isso faz o fundo ficar parado e cobrir tudo */
+    min-height: 100vh;
+    color: #fff;
+}
+
+.cadastramento {
+    background: rgba(20, 20, 20, 0.8);
+    backdrop-filter: blur(10px);
+    box-shadow: 0 0 30px rgb(2, 2, 255);
+    border: 2px solid #0044ff;
+    
+    /* AJUSTE DE LARGURA RESPONSIVA */
+    width: 90%; 
+    max-width: 620px; 
+    
+    padding: 20px;
+    border-radius: 12px;
+    z-index: 10;
+
+    /* CENTRALIZAÇÃO E MARGEM */
+    margin: 110px auto 40px auto; /* 110px no topo para não bater no menu, 'auto' nas laterais para centralizar */
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+}
+
+.container h1 {
+    text-align: center;
+    margin-bottom: 15px;
+    background: linear-gradient(90deg, #00ffcc, #00aaff);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.container label {
+    font-size: 15px;
+    margin-top: 5px;
+}
+
+.container input {
+    padding: 6px;
+    width: 100%;
+    border-radius: 8px;
+    border: none;
+    margin-bottom: 8px;
+}
+
+.container button {
+    width: 100%;
+    padding: 8px;
+    margin-top: 15px;
+    border-radius: 8px;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+.container button:hover {
+    background-color: rgba(220, 220, 220, 0.5);
+}

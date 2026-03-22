@@ -1,0 +1,146 @@
+@import url('https://fonts.googleapis.com/css2?family=Bungee&display=swap');
+
+.cards{
+    display: flex;
+
+    overflow-x: auto;
+    overflow-y: hidden;
+
+    gap: 20px;
+    padding: 20px;
+
+    scroll-snap-type: x mandatory;
+}
+
+/* esconder barra */
+.cards::-webkit-scrollbar{
+    display: none;
+}
+
+.main h1{
+    margin-right: 7%;
+    font-size: 70px;
+    color: white;
+}
+
+/* cardes */
+.cardes{
+    min-width: 350px;
+    height: 340px;
+    margin-top: 30px;
+
+    flex: none;
+
+    color: white;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    border-radius: 10px;
+
+    font-size: 20px;
+
+    scroll-snap-align: center;
+
+    transition: 0.3s;
+}
+
+.cardes:hover{
+    transform: scale(1.05);
+}
+
+.cardes img{
+    width: 350px;
+    height: 340px;
+    border-radius: 10px;
+    object-fit: cover;
+}
+
+
+/* 📱 RESPONSIVO */
+
+@media (max-width: 980px) {
+        .main h1{
+            font-size: 60px;
+            margin-right: 0;
+            text-align: center;
+        }
+    
+        /* ✅ aqui era .card errado */
+        .cards{
+            gap: 30px;
+            display: grid;
+            grid-template-columns: repeat(2, 300px);
+            margin-left: 80px;
+        }
+    
+        .cardes{
+            min-width: 270px;
+            height: 280px;
+    
+        }
+    
+        .cardes img{
+            width: 300px;
+            height: 280px;
+        }
+}
+
+@media (max-width: 780px) {
+    .main h1{
+        font-size: 60px;
+        margin-right: 0;
+        text-align: center;
+    }
+
+     /* ✅ aqui era .card errado */
+    .cards{
+        gap: 30px;
+        display: grid;
+        grid-template-columns: repeat(2, 300px);
+        margin-left: 30px;
+    }
+
+    .cardes{
+        min-width: 270px;
+        height: 280px;
+
+    }
+
+    .cardes img{
+        width: 300px;
+        height: 280px;
+    }
+
+}
+
+
+
+@media (max-width: 570px) {
+
+    .main h1{
+        font-size: 50px;
+        margin-right: 0;
+        text-align: center;
+    }
+
+    /* ✅ aqui era .card errado */
+    .cards{
+        gap: 10px;
+        display: grid;
+        grid-template-columns: repeat(1, 300px);
+        margin-left: 30px;
+    }
+
+    .cardes{
+        min-width: 270px;
+        height: 280px;
+
+    }
+
+    .cardes img{
+        width: 300px;
+        height: 280px;
+    }
+}
