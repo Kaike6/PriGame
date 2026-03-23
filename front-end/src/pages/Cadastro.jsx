@@ -18,54 +18,49 @@ function Cadastro() {
     const [pais, setPais] = useState("");
 
 
-    function Enviar(e) {
-        e.preventDefault();
+function Enviar(e) {
+    e.preventDefault();
 
-        if (
-            nome === "" ||
-            email === "" ||
-            telefone === "" ||
-            senha === "" ||
-            dataDenascimento === "" ||
-            endereco === "" ||
-            estado === "" ||
-            cidade === "" ||
-            nacionalidade === "" ||
-            pais === ""
-        ) {
-            alert("Preencha todos os campos");
-            return;
-        }
-
-        const dados = {
-            nome,
-            email,
-            telefone,
-            senha,
-            dataDenascimento,
-            endereco,
-            estado,
-            cidade,
-            nacionalidade,
-            pais
-        };
-
-        // salva cadastro
-        localStorage.setItem(
-            "usuario",
-            JSON.stringify(dados)
-        );
-
-        // salva usuario logado
-        localStorage.setItem(
-            "logado",
-            JSON.stringify(dados)
-        );
-
-        alert("Cadastro salvo ✅");
-
-        window.location.href = "/perfil";
+    if (
+        nome === "" ||
+        email === "" ||
+        telefone === "" ||
+        senha === "" ||
+        dataDenascimento === "" ||
+        endereco === "" ||
+        estado === "" ||
+        cidade === "" ||
+        nacionalidade === "" ||
+        pais === ""
+    ) {
+        alert("Preencha todos os campos");
+        return;
     }
+
+    const dados = {
+        nome,
+        email,
+        telefone,
+        senha,
+        dataDenascimento,
+        endereco,
+        estado,
+        cidade,
+        nacionalidade,
+        pais
+    };
+
+    // salva cadastro
+    localStorage.setItem(
+        "usuario",
+        JSON.stringify(dados)
+    );
+
+    alert("Cadastro salvo ✅");
+
+    // vai para login
+    window.location.href = "/login";
+}
 
 
     return (

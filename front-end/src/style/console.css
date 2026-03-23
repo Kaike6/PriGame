@@ -6,7 +6,7 @@
     overflow-x: auto;
     overflow-y: hidden;
 
-    gap: 20px;
+    gap: 60px;
     padding: 20px;
 
     scroll-snap-type: x mandatory;
@@ -18,14 +18,14 @@
 }
 
 .main h1{
-    margin-right: 7%;
+    margin-right: 4%;
     font-size: 70px;
     color: white;
 }
 
 /* cardes */
 .cardes{
-    min-width: 350px;
+    min-width: 320px;
     height: 340px;
     margin-top: 30px;
 
@@ -51,12 +51,11 @@
 }
 
 .cardes img{
-    width: 350px;
+    width: 320px;
     height: 340px;
     border-radius: 10px;
     object-fit: cover;
 }
-
 
 /* 📱 RESPONSIVO */
 

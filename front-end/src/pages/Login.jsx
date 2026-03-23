@@ -2,14 +2,16 @@ import Input from "../components/Input";
 import Label from "../components/Label";
 import Button from "../components/Button";
 import { useState } from "react";
+import { useNavigate } from "react-router-dom";
 import "../style/login.css"
-
 
 function Login() {
 
     const [nome, setNome] = useState("");
     const [email, setEmail] = useState("");
     const [senha, setSenha] = useState("");
+
+    const navigate = useNavigate();
 
     function Enviar(e) {
         e.preventDefault();
@@ -23,14 +25,12 @@ function Login() {
             return;
         }
 
-        // verifica login
         if (
             nome === usuarioSalvo.nome &&
             email === usuarioSalvo.email &&
             senha === usuarioSalvo.senha
         ) {
 
-            // salva usuário logado
             localStorage.setItem(
                 "logado",
                 JSON.stringify(usuarioSalvo)
@@ -38,14 +38,12 @@ function Login() {
 
             alert("Login realizado ✅");
 
-            // redirecionar (opcional)
-            window.location.href = "/";
+            navigate("/"); // ✅ CORRETO
 
         } else {
             alert("Nome, Email ou senha incorretos ❌");
         }
     }
-
 
     return (
         <form className="login" onSubmit={Enviar}>
@@ -60,7 +58,6 @@ function Login() {
                     onChange={(e) => setNome(e.target.value)}
                 />
 
-
                 <Label>Email</Label>
                 <Input
                     type="email"
@@ -74,7 +71,6 @@ function Login() {
                     value={senha}
                     onChange={(e) => setSenha(e.target.value)}
                 />
-                
 
                 <Button>Entrar</Button>
 
