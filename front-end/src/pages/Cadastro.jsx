@@ -19,6 +19,7 @@ function Cadastro() {
 
 
 function Enviar(e) {
+    const navigate = useNavigate();
     e.preventDefault();
 
     if (
@@ -59,7 +60,7 @@ function Enviar(e) {
     alert("Cadastro salvo ✅");
 
     // vai para login
-    window.location.href = "/login";
+    navigate("/login");
 }
 
 
