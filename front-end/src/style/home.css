@@ -67,7 +67,7 @@ html, body{
 
 .home h1{
     text-align: center;
-    font-size: 40px;
+    font-size: 60px;
     color: white;
     margin-top: 90px;
     padding-top: 50px;
@@ -113,6 +113,13 @@ html, body{
     .homeLista{
         grid-template-columns: repeat(3, 250px);
     }
+    .home h1{
+    text-align: center;
+    font-size: 60px;
+    color: white;
+    margin-top: 90px;
+    padding-top: 50px;
+}
 
 }
 
@@ -137,6 +144,13 @@ html, body{
         justify-content: center;
         margin-right: 25%;
     }
+    .home h1{
+    text-align: center;
+    font-size: 60px;
+    color: white;
+    margin-top: 90px;
+    padding-top: 50px;
+}
 
 }
 
@@ -147,7 +161,7 @@ html, body{
 @media (max-width: 868px){
 
     .homeHeader img{
-        width: 90vw;
+        width: 85vw;
         height: 220px;
     }
 
@@ -162,6 +176,13 @@ html, body{
         justify-content: center;
         margin-right: 25%;
     }
+    .home h1{
+    text-align: center;
+    font-size: 60px;
+    color: white;
+    margin-top: 90px;
+    padding-top: 50px;
+}
 
 }
 
@@ -179,7 +200,7 @@ html, body{
     }
 
     .home h1{
-        font-size: 36px;
+        font-size: 60px;
         text-align: center;
     }
 
@@ -189,8 +210,9 @@ html, body{
     }
 
     .homeHeader img{
-        width: 90vw;
+        width: 83vw;
         height: 200px;
+
     }
 
 }
@@ -202,12 +224,12 @@ html, body{
 @media (max-width: 475px){
 
     .home h1{
-        font-size: 28px;
+        font-size: 60px;
     }
 
-    .homeHeader img{
-        width: 85vw;
-        height: 190px;
+    .homeHeader {
+        width: 90vw;
+        height: 170px;
     }
 
 }
