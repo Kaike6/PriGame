@@ -1,7 +1,7 @@
 import { useNavigate } from "react-router-dom"
-import ps5black from "../assets/ps5black.jpg"
-import xbox from "../assets/xbox black.jpg"
-import Swhite from "../assets/Swhite.avif"
+import ps5 from "../assets/ps5.png"
+import Xbox from "../assets/Xbox.png"
+import Swhitch from "../assets/Swhitch.jpg"
 import PC from "../assets/PC.png"
 import "../style/console.css"
 
@@ -23,19 +23,19 @@ function Console(){
                 <button
                     onClick={() => navegar("/PS5")}
                     className="cardes">
-                    <img src={ps5black} alt="PS5 Black" />
+                    <img src={ps5} alt="PS5" />
                 </button>
 
                 <button
                     onClick={() => navegar("/Xbox")}
                     className="cardes">
-                    <img src={xbox} alt="Xbox" />
+                    <img src={Xbox} alt="Xbox" />
                 </button>
 
                 <button
-                    onClick={() => navegar("/SWhite")}
+                    onClick={() => navegar("/Swhitch")}
                     className="cardes">
-                    <img src={Swhite} alt="S White" />
+                    <img src={Swhitch} alt="Swhitch" />
                 </button>
 
                 <button

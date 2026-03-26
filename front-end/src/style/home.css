@@ -1,18 +1,53 @@
 @import url('https://fonts.googleapis.com/css2?family=Bungee&display=swap');
 
+/* ===== RESET ===== */
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    font-family: Arial, sans-serif;
+    overflow-x: hidden;
+}
+
+/* ===== TITULOS ===== */
 h1{
     font-family: "Bungee", sans-serif;
 }
 
+.home h1{
+    text-align: center;
+    font-size: 60px;
+    color: white;
+    margin-top: 90px;
+    padding-top: 50px;
+}
+
+.home h2{
+    text-align: center;
+    font-size: 40px;
+    color: white;
+    padding-top: 30px;
+}
+
+.jogos h4{
+    text-align: center;
+    font-size: 40px;
+    color: white;
+    margin-top: 40px;
+}
+
+/* ===== MAIN ===== */
 main{
     min-height: 100vh;
 }
 
 /* ===== HEADER SCROLL ===== */
-
 .homeHeader{
     display: flex;
-    gap: 40px;
+    gap: 30px;
     overflow-x: auto;
     padding: 40px;
     scrollbar-width: none;
@@ -22,144 +57,92 @@ main{
     display: none;
 }
 
-
 /* imagens */
 .homeHeader img{
-    width: 22vw;
-    max-width: 900px;
-    height: 50vh;
-
+    width: clamp(200px, 22vw, 320px);
+    height: 300px;
     object-fit: cover;
     border-radius: 20px;
-
     transition: 0.3s;
-    
+    margin-left: 14px;
 }
 
-
-/* efeitos */
-
+/* efeitos nas imagens */
 .god img:hover{
-    box-shadow: 0 0 50px rgb(158,158,235);
+    box-shadow: 0 0 40px rgb(158,158,235);
 }
 
-.moortal img:hover{
-    box-shadow: 0 0 50px rgb(184,162,18);
+.mortal img:hover{
+    box-shadow: 0 0 40px rgb(184,162,18);
 }
 
 .gta img:hover{
-    box-shadow: 0 0 50px rgb(122,18,167);
+    box-shadow: 0 0 40px rgb(122,18,167);
 }
 
 .resid img:hover{
-    box-shadow: 0 0 50px white;
+    box-shadow: 0 0 40px white;
 }
 
-
-/* impedir scroll lateral */
-
-html, body{
-    overflow-x: hidden;
-}
-
-
-/* ===== TITULO ===== */
-
-.home h1{
-    text-align: center;
-    font-size: 60px;
-    color: white;
-    margin-top: 90px;
-    padding-top: 50px;
-}
-.home h2{
-    text-align: center;
-    font-size: 40px;
-    color: white;
-    padding-top: 30px;
-}
-
-
-
+/* ===== GRID DE JOGOS ===== */
 .homeLista{
     display: grid;
-    grid-template-columns: repeat(4, 260px);
-    justify-content: center;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
     gap: 40px;
-    margin-top: 50px;
+    margin: 50px auto;
+    max-width: 1200px;
 }
 
-.jogos h4{
-    text-align: center;
-    font-size: 50px;
+/* ===== PESQUISA ===== */
+.pesquisa{
+    display: flex;
+    justify-content: center;
+    margin-right: 25%;
+}
+
+.pesquisa button{
+    padding: 12px 25px;
+    border: none;
+    background: linear-gradient(45deg, #1e90ff, #00bfff);
     color: white;
-    margin-right: 7%;
-        margin-top: 40px;
+    cursor: pointer;
+    transition: all 0.3s ease;
 }
 
+/* hover */
+.pesquisa button:hover{
+    transform: scale(1.1);
+    box-shadow: 0 0 15px #00bfff;
+}
 
+/* clique */
+.pesquisa button:active{
+    transform: scale(0.95);
+}
 
-/* ===== GRID NORMAL (PC GRANDE) ===== */
+/* ===== RESPONSIVIDADE ===== */
 
-
-/* ============================= */
 /* NOTEBOOK */
-/* ============================= */
-/* ============================= */
-/* NOTEBOOK / PC MENOR */
-/* ============================= */
 @media (max-width: 1280px){
-
-    .homeLista{
-        grid-template-columns: repeat(3, 250px);
-    }
     .home h1{
-    text-align: center;
-    font-size: 60px;
-    color: white;
-    margin-top: 90px;
-    padding-top: 50px;
+        font-size: 50px;
+    }
 }
 
-}
-
-
-/* ============================= */
 /* TABLET */
-/* ============================= */
 @media (max-width: 1024px){
-
     .homeHeader img{
         width: 90vw;
-        height: 300px;
+        height: 250px;
     }
 
-    .homeLista{
-        grid-template-columns: repeat(2, 230px);
-        justify-content: center;
-    }
-        .pesquisa{
-        margin-right: 0;
-        display: flex;
-        justify-content: center;
-        margin-right: 25%;
-    }
     .home h1{
-    text-align: center;
-    font-size: 60px;
-    color: white;
-    margin-top: 90px;
-    padding-top: 50px;
+        font-size: 45px;
+    }
 }
 
-}
-
-
-/* ============================= */
 /* CELULAR GRANDE */
-/* ============================= */
 @media (max-width: 868px){
-
     .homeHeader img{
         width: 85vw;
         height: 220px;
@@ -167,69 +150,35 @@ html, body{
 
     .home h1{
         font-size: 32px;
-        text-align: center;
     }
 
-    .pesquisa{
-        margin-right: 0;
-        display: flex;
-        justify-content: center;
-        margin-right: 25%;
+    .home h2{
+        font-size: 26px;
     }
-    .home h1{
-    text-align: center;
-    font-size: 60px;
-    color: white;
-    margin-top: 90px;
-    padding-top: 50px;
 }
 
-}
-
-
-/* ============================= */
 /* CELULAR */
-/* ============================= */
 @media (max-width: 540px){
-
-    .homeLista,
-    .jogos,
-    .jogosInvisivel{
+    .homeLista{
         grid-template-columns: 1fr;
-        justify-content: center;
-    }
-
-    .home h1{
-        font-size: 60px;
-        text-align: center;
-    }
-
-    .pesquisa{
-        width: 140px;
-        margin: 20px auto;
     }
 
     .homeHeader img{
         width: 83vw;
         height: 200px;
-
     }
-
-}
-
-
-/* ============================= */
-/* CELULAR PEQUENO */
-/* ============================= */
-@media (max-width: 475px){
 
     .home h1{
-        font-size: 60px;
+        font-size: 28px;
     }
+}
 
-    .homeHeader {
-        width: 90vw;
-        height: 170px;
+/* CELULAR PEQUENO */
+@media (max-width: 475px){
+    .home h1{
+        font-size: 24px;
     }
-
+    .pesquisa{
+        margin-right: 90px;
+    }
 }

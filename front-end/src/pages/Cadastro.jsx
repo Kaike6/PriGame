@@ -2,9 +2,11 @@ import Input from "../components/Input";
 import Label from "../components/Label";
 import Button from "../components/Button";
 import { useState } from "react";
+import { useNavigate } from "react-router-dom";
 import "../style/cadastro.css";
 
 function Cadastro() {
+    const navigate = useNavigate(); 
 
     const [nome, setNome] = useState("");
     const [email, setEmail] = useState("");
@@ -19,7 +21,7 @@ function Cadastro() {
 
 
 function Enviar(e) {
-    const navigate = useNavigate();
+    
     e.preventDefault();
 
     if (
