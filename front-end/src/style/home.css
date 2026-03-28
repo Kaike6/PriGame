@@ -149,7 +149,7 @@ main{
     }
 
     .home h1{
-        font-size: 32px;
+        font-size: 20px;
     }
 
     .home h2{
@@ -176,7 +176,7 @@ main{
 /* CELULAR PEQUENO */
 @media (max-width: 475px){
     .home h1{
-        font-size: 24px;
+        font-size: 34px;
     }
     .pesquisa{
         margin-right: 90px;

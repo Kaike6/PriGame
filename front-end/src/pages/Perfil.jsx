@@ -1,5 +1,6 @@
 import { useEffect, useState } from "react";
 import EditarPerfil from "../components/EditarPerfil";
+import  "../style/Perfil.css"
 
 function Perfil(){
 
@@ -8,24 +9,26 @@ function Perfil(){
     useEffect(() => {
 
         const dados = JSON.parse(
-            localStorage.getItem("logado")
+            localStorage.getItem("usuario")
         );
 
         setUsuario(dados);
 
     }, []);
 
+    
     if(!usuario){
         return <h2>Nenhum usuário logado</h2>
     }
 
     return(
         <>
-        <div>
+        <div className="perfil">
             <h1>Perfil</h1>
 
+        
+        <EditarPerfil  setUsuario={setUsuario}/>
         </div>
-        <EditarPerfil />
         </>
     )
 }

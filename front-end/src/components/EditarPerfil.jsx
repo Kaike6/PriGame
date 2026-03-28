@@ -3,7 +3,7 @@ import Label from "../components/Label";
 import Button from "../components/Button";
 import { useState, useEffect } from "react";
 
-function EditarPerfil(){
+function EditarPerfil({setUsuario }){
 
     const [nome, setNome] = useState("");
     const [email, setEmail] = useState("");
@@ -16,9 +16,11 @@ function EditarPerfil(){
     const [nacionalidade, setNacionalidade] = useState("");
     const [pais, setPais] = useState("");
 
+    const [editando, setEditando] = useState(false);
 
     // ✅ carregar dados
     useEffect(() => {
+        
 
         const usuarioSalvo = JSON.parse(
             localStorage.getItem("usuario")
@@ -44,7 +46,7 @@ function EditarPerfil(){
 
 
     // ✅ salvar de novo
-    function salvar(e){
+    function editar(e){
 
         e.preventDefault();
 
@@ -67,6 +69,10 @@ function EditarPerfil(){
             "usuario",
             JSON.stringify(usuario)
         );
+                setUsuario(usuario);
+                    setEditando(false);
+
+
 
         alert("Dados atualizados ✅");
 
@@ -76,7 +82,7 @@ function EditarPerfil(){
 
     return(
 
-        <form onSubmit={salvar}>
+        <form onSubmit={editar}>
 
 
 
@@ -85,6 +91,7 @@ function EditarPerfil(){
                 <Input
                     type="text"
                     value={nome}
+                    disabled={!editando}
                     onChange={(e)=> setNome(e.target.value)}
                 />
             </div>
@@ -96,6 +103,7 @@ function EditarPerfil(){
                 <Input
                     type="email"
                     value={email}
+                    disabled={!editando}
                     onChange={(e)=> setEmail(e.target.value)}
                 />
             </div>
@@ -107,6 +115,7 @@ function EditarPerfil(){
                 <Input
                     type="text"
                     value={telefone}
+                    disabled={!editando}
                     onChange={(e)=> setTel(e.target.value)}
                 />
             </div>
@@ -118,6 +127,7 @@ function EditarPerfil(){
                 <Input
                     type="date"
                     value={dataNascimento}
+                    disabled={!editando}
                     onChange={(e)=> setData(e.target.value)}
                 />
             </div>
@@ -129,6 +139,7 @@ function EditarPerfil(){
                 <Input
                     type="text"
                     value={endereco}
+                    disabled={!editando}
                     onChange={(e)=> setEndereco(e.target.value)}
                 />
             </div>
@@ -140,6 +151,7 @@ function EditarPerfil(){
                 <Input
                     type="text"
                     value={estado}
+                    disabled={!editando}
                     onChange={(e)=> setEstado(e.target.value)}
                 />
             </div>
@@ -151,6 +163,7 @@ function EditarPerfil(){
                 <Input
                     type="text"
                     value={cidade}
+                    disabled={!editando}
                     onChange={(e)=> setCidade(e.target.value)}
                 />
             </div>
@@ -162,6 +175,7 @@ function EditarPerfil(){
                 <Input
                     type="text"
                     value={nacionalidade}
+                    disabled={!editando}
                     onChange={(e)=> setNacionalidade(e.target.value)}
                 />
             </div>
@@ -173,6 +187,7 @@ function EditarPerfil(){
                 <Input
                     type="text"
                     value={pais}
+                    disabled={!editando}
                     onChange={(e)=> setPais(e.target.value)}
                 />
             </div>
@@ -184,16 +199,31 @@ function EditarPerfil(){
                 <Input
                     type="password"
                     value={senha}
+                    disabled={!editando}
                     onChange={(e)=> setSenha(e.target.value)}
                 />
             </div>
 
 
 
-            <Button type="submit">
-                Salvar alterações
-            </Button>
+<div>
+    
+    <Button type="button" onClick={() => setEditando(true)}>
+        Editar
+    </Button>
 
+    <Button type="submit" disabled={!editando}>
+        Salvar
+    </Button>
+    <Button 
+    type="button" 
+    onClick={() => setEditando(false)}
+    disabled={!editando}
+>
+    Cancelar
+</Button>
+
+</div>
 
 
         </form>
