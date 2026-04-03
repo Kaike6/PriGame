@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 import EditarPerfil from "../components/EditarPerfil";
-import  "../style/Perfil.css"
+import  "../style/perfil.css"
 
 function Perfil(){
 
