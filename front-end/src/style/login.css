@@ -1,68 +1,110 @@
+
+.input-erro {
+  border: 2px solid red !important;
+}
+
+.input-erro::placeholder {
+  color: red;
+}
+
 body {
     margin: 0;
     padding: 0;
-    font-family: 'Roboto', sans-serif;
-    /* O gradiente agora cobre a tela toda e não rola com o texto */
-    background: linear-gradient(135deg, #000000, #00008b) no-repeat center center fixed; 
-    background-size: cover;
-    min-height: 100vh;
-    color: #fff;
-    /* Adicionado para garantir que nada escape horizontalmente */
-    overflow-x: hidden; 
-}
 
+
+}
+/* CARD */
 .login {
-    background: rgba(20, 20, 20, 0.8);
-    backdrop-filter: blur(10px);
-    box-shadow: 0 0 30px rgb(2, 2, 255);
-    border: 2px solid #0044ff;
-    
-    width: 90%; /* Responsivo: ocupa 90% em telas pequenas */
-    max-width: 620px; /* Mas não passa de 620px em telas grandes */
-    
-    padding: 20px;
-    border-radius: 12px;
-    z-index: 10;
-    
-    /* CENTRALIZAÇÃO AQUI */
-    margin: 120px auto 50px auto; /* Topo, Direita, Baixo, Esquerda */
+    background: rgba(255, 255, 255, 0.04);
+    backdrop-filter: blur(20px);
+    width: 100%;
+    max-width: 400px;
+    padding: 30px;
+    border-radius: 16px;
+
+    border: 1px solid rgba(255,255,255,0.1);
+    box-shadow: 0 20px 60px rgba(0,0,0,0.5);
+
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+
+    animation: fadeIn 0.6s ease;
 }
 
+/* CONTAINER */
 .containerLogin {
     display: flex;
     flex-direction: column;
+    
 }
 
+/* TÍTULO */
 .containerLogin h1 {
     text-align: center;
-    margin-bottom: 15px;
-    background: linear-gradient(90deg, #00ffcc, #00aaff);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
+    margin-bottom: 25px;
+    font-size: 26px;
+    font-weight: 600;
+    color: #f1f5f9;
 }
 
+/* LABEL */
 .containerLogin label {
-    font-size: 15px;
-    margin-top: 5px;
+    font-size: 13px;
+    color: #94a3b8;
+    margin-bottom: 6px;
 }
 
+/* INPUT */
 .containerLogin input {
-    padding: 6px;
-    width: 100%;
-    border-radius: 8px;
-    border: none;
-    margin-bottom: 8px;
+    padding: 14px;
+    border-radius: 10px;
+    border: 1px solid transparent;
+    margin-bottom: 15px;
+    font-size: 14px;
+
+    background: rgba(255,255,255,0.05);
+    color: #fff;
+
+    transition: all 0.25s ease;
 }
 
+/* FOCUS BONITO */
+.containerLogin input:focus {
+    outline: none;
+    border: 1px solid #3b82f6;
+    box-shadow: 0 0 0 3px rgba(59,130,246,0.2);
+}
+
+/* BOTÃO */
 .containerLogin button {
-    width: 100%;
-    padding: 8px;
-    margin-top: 15px;
-    border-radius: 8px;
+    background: linear-gradient(90deg, #3b82f6, #2563eb);
+    color: white;
+    padding: 14px;
+    border-radius: 10px;
+    border: none;
+    font-size: 15px;
+    font-weight: 600;
     cursor: pointer;
-    font-weight: bold;
+
+    transition: all 0.25s ease;
 }
 
+/* HOVER SUAVE */
 .containerLogin button:hover {
-    background-color: rgba(220, 220, 220, 0.5);
+    transform: translateY(-2px);
+    box-shadow: 0 10px 20px rgba(37,99,235,0.4);
+}
+
+/* ANIMAÇÃO */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
 }

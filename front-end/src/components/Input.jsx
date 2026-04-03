@@ -1,4 +1,4 @@
-function Input({ type, placeholder, name, onChange, value, disabled }) {
+function Input({ type, placeholder, name, onChange, value, disabled, className }) {
     return (
         <input
             type={type}
@@ -6,7 +6,8 @@ function Input({ type, placeholder, name, onChange, value, disabled }) {
             name={name}
             onChange={onChange}
             value={value}
-            disabled={disabled} // 👈 ESSA LINHA RESOLVE
+            disabled={disabled}
+            className={className} // 👈 ESSA LINHA RESOLVE
         />
     );
 }
