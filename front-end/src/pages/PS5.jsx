@@ -1,5 +1,5 @@
-import "../style/home.css"
 import "../style/cards.css"
+import "../style/ps5.css"
 
 import { useState } from "react"
 import { useNavigate } from "react-router-dom"
@@ -46,6 +46,18 @@ function PS5() {
   const produtospesquisar = [
     { nome: "PS4", img: Ps4, preco: 2500, desc: "Playstation 4" },
     { nome: "PS5", img: Ps5, preco: 4500, desc: "Playstation 5" },
+    { nome: "PS1", img: Ps1, preco: 500, desc: "Playstation 1" },
+    { nome: "PS2", img: Ps2, preco: 700, desc: "Playstation 2" },
+    { nome: "PS3", img: Ps3, preco: 1200, desc: "Playstation 3" },
+    { nome: "PS4", img: Ps4, preco: 2500, desc: "Playstation 4" },
+    { nome: "PS5", img: Ps5, preco: 4500, desc: "Playstation 5" },
+
+    { nome: "Capa Proteção", img: capaProtecao, preco: 100, desc: "Capa controle" },
+    { nome: "Carregador", img: caregadorPs5, preco: 150, desc: "Carregador PS5" },
+    { nome: "Estojo", img: estojoPs5, preco: 80, desc: "Estojo controle" },
+    { nome: "Fone Bluetooth", img: foneBluttof, preco: 200, desc: "Fone gamer" },
+    { nome: "Fone com fio", img: fonefio, preco: 90, desc: "Fone gamer" }
+    
 
   ]
 
@@ -65,6 +77,8 @@ function PS5() {
         <>
           <h2>RESULTADO</h2>
 
+
+
           <div className="jogosInvisivel">
             <Jogos jogos={produtosFiltrados} comprar={comprar} />
           </div>
@@ -79,7 +93,6 @@ function PS5() {
       </div>
 
 
-      <h4>PESQUISAR</h4>
 
 
 

@@ -23,6 +23,7 @@ h1{
     color: white;
     margin-top: 90px;
     padding-top: 50px;
+    margin-left: 20px;
 }
 
 .home h2{
@@ -60,11 +61,11 @@ main{
 /* imagens */
 .homeHeader img{
     width: clamp(200px, 22vw, 320px);
-    height: 300px;
+    height: 350px;
+    width: 100%;
     object-fit: cover;
     border-radius: 20px;
     transition: 0.3s;
-    margin-left: 14px;
 }
 
 /* efeitos nas imagens */
@@ -107,6 +108,7 @@ main{
     color: white;
     cursor: pointer;
     transition: all 0.3s ease;
+    margin-right: 70px;
 }
 
 /* hover */

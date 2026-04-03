@@ -85,7 +85,7 @@ const jogosVisiveis = [
 
       <section className="homeHeader">
         <div className="god"><img src={godOFwar} /></div>
-        <div className="moortal"><img src={mortalkombat} /></div>
+        <div className="mortal"><img src={mortalkombat} /></div>
         <div className="gta"><img src={gta6} /></div>
         <div className="resid"><img src={resident} /></div>
       </section>
