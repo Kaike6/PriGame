@@ -30,7 +30,7 @@ function Xbox() {
   }
 
 
-const produtosPS5 = [
+const produtosXBOX = [
   { nome: "Xbox 360", img: xbox360, preco: 800, desc: "Console Xbox 360" },
   { nome: "Xbox One", img: xboxOne, preco: 1800, desc: "Console Xbox One" },
   { nome: "Xbox One S", img: xboxOnes, preco: 2200, desc: "Console Xbox One S" },
@@ -72,7 +72,7 @@ const produtosPS5 = [
     { nome: "paddies para xbox", img: paddiesxbox, preco: 2500, desc: "xbox serie" },
   ]
 
-  const produtosFiltrados = produtosPS5 && produtospesquisar.filter(p =>
+  const produtosFiltrados = produtosXBOX && produtospesquisar.filter(p =>
     p.nome.toLowerCase().includes(pesquisa.toLowerCase())
   )
 
@@ -98,7 +98,7 @@ const produtosPS5 = [
       <h2>PRODUTOS</h2>
 
       <div className="jogos">
-        <Jogos jogos={produtosPS5} comprar={comprar} />
+        <Jogos jogos={produtosXBOX} comprar={comprar} />
       </div>
 
 

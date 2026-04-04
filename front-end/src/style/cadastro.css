@@ -1,54 +1,19 @@
-.input-erro {
-  border: 2px solid red !important;
-}
-
-.input-erro::placeholder {
-  color: red;
-}
-
-.data-row {
-  display: flex;
-  gap: 10px;
-  
-}
-
-.data-row select {
-  flex: 1;
-  padding: 9px;
-  border-radius: 10px;
-  color: rgb(127, 123, 123);
-    border: 1px solid transparent;
-    background: rgba(255,255,255,0.05);
-    margin: 10px auto;
-
-}
-
-.data-row select option {
-    background: rgba(255,255,255,0.05);
-
-    color: black;
-}
-
-
+/* CONTAINER PRINCIPAL DO FORMULÁRIO */
 .cadastramento {
-    width: 100%;
+    width: 90%;
     max-width: 500px;
     padding: 30px;
     border-radius: 16px;
-
     background: rgba(255, 255, 255, 0.04);
     backdrop-filter: blur(20px);
-
     border: 1px solid rgba(255,255,255,0.1);
     box-shadow: 0 20px 60px rgba(0,0,0,0.5);
-   position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    animation: fadeIn 0.6s ease;
-    margin-top: 45px;
-}
 
+    /* Centralização correta sem sumir da tela */
+    margin: 100px auto 50px auto; 
+    position: relative; 
+    animation: fadeIn 0.6s ease;
+}
 .container {
     display: flex;
     flex-direction: column;
@@ -57,69 +22,140 @@
 /* TÍTULO */
 .container h1 {
     text-align: center;
-    font-size: 30px;
-    font-weight: 600;
+    font-size: 28px;
+    margin-bottom: 20px;
     color: #f1f5f9;
 }
 
-/* LABEL */
+/* LABELS E INPUTS */
 .container label {
     font-size: 13px;
     color: #94a3b8;
     margin-bottom: 5px;
+    display: block;
 }
 
-/* INPUT */
 .container input {
-    padding: 9px;
+    padding: 10px;
     width: 100%;
     border-radius: 10px;
     border: 1px solid transparent;
-    margin-bottom: 12px;
-
-    background: rgba(255,255,255,0.05);
+    margin-bottom: 15px;
+    background: rgba(255,255,255,0.08);
     color: #fff;
-
-    transition: 0.25s;
+    box-sizing: border-box; /* Garante que o padding não aumente a largura */
 }
 
-.container input:focus {
-    outline: none;
-    border: 1px solid #3b82f6;
-    box-shadow: 0 0 0 3px rgba(59,130,246,0.2);
+/* LINHA DA DATA (SELECTS) */
+.data-row {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 15px;
 }
 
-/* BOTÃO */
+.data-row select {
+    flex: 1;
+    padding: 10px;
+    border-radius: 10px;
+    background: rgba(255,255,255,0.08);
+    color: #fff;
+    border: 1px solid transparent;
+}
+
+.data-row select option {
+    background: #1e293b; /* Fundo escuro para leitura no dropdown */
+    color: white;
+}
+
+/* BOTÃO CENTRALIZADO */
+.btnCadastra {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    margin-top: 10px;
+}
+
 .btnCadastra button {
-    width: 30%;
-    padding: 15px;
-    margin-left: 33%;
+    width: 100%; /* Largura total dentro do limite ou ajuste para 200px */
+    max-width: 500px;
+    padding: 14px;
     border-radius: 10px;
     border: none;
-
     background: linear-gradient(90deg, #3b82f6, #2563eb);
     color: white;
-
-    font-size: 15px;
     font-weight: 600;
     cursor: pointer;
-
-    transition: 0.25s;
+    transition: 0.3s;
 }
 
 .btnCadastra button:hover {
-    transform: translateY(-2px);
-    box-shadow: 0 10px 20px rgba(37,99,235,0.4);
+    transform: scale(1.02);
+    box-shadow: 0 5px 15px rgba(37,99,235,0.4);
 }
 
+/* ERROS */
+.input-erro {
+    border: 1px solid #ef4444 !important;
+}
 
 @keyframes fadeIn {
-    from {
-        opacity: 0;
-        transform: translateY(20px);
+    from { opacity: 0; transform: translateY(10px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+/* RESPONSIVIDADE (Celulares e Tablets) */
+
+@media (max-width: 1024px) {
+    .cadastramento {
+        width: 100%;          /* Ocupa quase a tela toda nos lados */
+        margin: 80px auto;  
+        margin-top: 20%; /* Diminui o recuo do topo */
     }
-    to {
-        opacity: 1;
-        transform: translateY(0);
+
+    .container h1 {
+        font-size: 34px;     /* Título menor para caber na tela */
+    }
+    .container label {
+        font-size: 18px;     /* Labels um pouco maiores para melhor leitura */
+    }
+    .container input {
+        padding: 18px;       /* Ajusta o espaçamento interno dos inputs */
+    }
+    .data-row select {
+        margin: 5px 0;       /* Ajusta o espaçamento dos selects no tablet */
+    }
+}
+
+@media (max-width: 768px) {
+    .cadastramento {
+        width: 95%;          /* Ocupa quase a tela toda nos lados */
+        margin: 80px auto;   /* Diminui o recuo do topo */
+        padding: 20px;       /* Diminui o espaçamento interno */
+    }
+
+    .container h1 {
+        font-size: 22px;     /* Título menor para caber na tela */
+    }
+
+
+
+    .data-row select {
+        margin: 5px 0;       /* Ajusta o espaçamento dos selects no celular */
+    }
+
+    .btnCadastra button {
+        width: 100%;         /* Botão ocupa a largura total no celular */
+        margin-left: 0;
+    }
+}
+
+/* Para telas muito pequenas (iPhone SE, etc) */
+@media (max-width: 400px) {
+    .cadastramento {
+        padding: 15px;
+    }
+    
+    .container label {
+        font-size: 12px;
     }
 }

@@ -1,6 +1,5 @@
 import { useState } from "react"
 import Button from "./Button"
-import Pix from "../components/Pix"
 import Parcelas from "../pages/Parcelas"
 import "../style/cards.css"
 import { useNavigate } from "react-router-dom"
@@ -65,7 +64,7 @@ setParcelas={setParcelas}
 <h3>Pix</h3>
 
 <div className="pixselect">
-<Button onClick={Pix}>
+<Button>
 Pagar com Pix
 </Button>
 </div>

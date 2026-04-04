@@ -1,0 +1,142 @@
+/* ======================= */
+/* CONTAINER */
+/* ======================= */
+
+.containerPs5 {
+    width: 100%;
+    padding: 20px;
+    margin-top: 120px;
+    text-align: center;
+}
+
+/* titulo igual home */
+
+.containerPs5 h2 {
+    margin-top: 30px;
+    font-size: 28px;
+}
+
+.containerPs5 h3 {
+    margin-top: 20px;
+    color: yellow;
+}
+
+/* ======================= */
+/* PESQUISA */
+/* ======================= */
+
+.pesquisa {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    margin-bottom: 25px;
+    flex-wrap: wrap;
+}
+
+.pesquisa input {
+    padding: 10px;
+    width: 250px;
+    border-radius: 6px;
+    border: 1px solid #333;
+    outline: none;
+}
+
+.pesquisa input:focus {
+    border: 1px solid #0066ff;
+    box-shadow: 0 0 5px #0066ff;
+}
+
+.pesquisa button {
+    padding: 10px 18px;
+    border: none;
+    background: linear-gradient(45deg,#0044ff,#0080ff);
+    color: white;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: 0.2s;
+}
+
+.pesquisa button:hover {
+    transform: scale(1.05);
+}
+
+
+/* ======================= */
+/* GRID IGUAL HOME */
+/* ======================= */
+
+.produtosPs5,
+.produtosinvisivel {
+
+    display: grid;
+
+    grid-template-columns: repeat(auto-fit, 260px);
+
+    justify-content: center;
+
+    gap: 25px;
+
+    margin-top: 20px;
+
+}
+
+
+/* ======================= */
+/* RESPONSIVO IGUAL HOME */
+/* ======================= */
+/* ============================= */
+/* TABLET */
+/* ============================= */
+
+@media (max-width: 868px){
+
+    .containerPs5 h2{
+        font-size: 28px;
+        text-align: center;
+    }
+
+    .pesquisa{
+        display: flex;
+        justify-content: center;
+        margin: 20px auto;
+    }
+
+}
+
+
+/* ============================= */
+/* CELULAR */
+/* ============================= */
+
+@media (max-width: 540px){
+
+    .produtosPs5,
+    .produtosinvisivel{
+        grid-template-columns: 1fr;
+        justify-content: center;
+    }
+
+    .containerPs5 h2{
+        font-size: 26px;
+        text-align: center;
+    }
+
+    .pesquisa{
+        width: 180px;
+        margin: 20px auto;
+    }
+
+}
+
+
+/* ============================= */
+/* CELULAR PEQUENO */
+/* ============================= */
+
+@media (max-width: 475px){
+
+    .containerPs5 h2{
+        font-size: 22px;
+    }
+
+}

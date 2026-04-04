@@ -43,6 +43,7 @@ function Menu() {
         <li><Link to="/Compras">Compras</Link></li>
         <li><Link to="/Contato">Contato</Link></li>
         <li><Link to="/cadastro">Cadastro</Link></li>
+        
 
         {/* se NÃO estiver logado */}
         {!logado && (
@@ -60,8 +61,11 @@ function Menu() {
         )}
 
         {logado && (
-          <li onClick={sair} style={{cursor:"pointer"}}>
-            Sair
+          < li onClick={sair} style={{cursor:"pointer"}}>
+            <div className="sair">
+              <a href="">Sair</a>
+            </div>
+            
           </li>
         )}
 

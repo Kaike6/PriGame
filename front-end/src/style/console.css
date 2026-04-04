@@ -133,7 +133,7 @@ body {
         display: grid;
         grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
         gap: 26px;
-        margin-left: 20px;
+        margin-right: 10px;
     }
 }
 

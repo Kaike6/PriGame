@@ -36,7 +36,7 @@ function Cadastro() {
         if (!nome) {
             novosErros.nome = true;
         }
-        if (!email) {
+        if (!email || !email.includes("@")) {
             novosErros.email = true;
         }
         if (!telefone) {
