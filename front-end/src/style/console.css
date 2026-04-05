@@ -97,6 +97,7 @@ body {
         min-width: 220px;
         height: 280px;
     }
+    
 }
 
 /* Celular */
@@ -109,9 +110,12 @@ body {
         font-size: 42px;
     }
 
-    .cards {
-        gap: 16px;
-    }
+.cards {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr); /* desktop */
+    gap: 30px;
+    padding: 20px;
+}
 
     .cardes {
         min-width: 180px;
@@ -129,12 +133,12 @@ body {
         min-width: 150px;
         height: 350px;
     }
-    .cards {
-        display: grid;
-        grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
-        gap: 26px;
-        margin-right: 10px;
-    }
+.cards {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr); /* desktop */
+    gap: 30px;
+    padding: 20px;
+}
 }
 
 /* ========================= */
