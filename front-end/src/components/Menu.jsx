@@ -18,8 +18,8 @@ function Menu() {
   }
 
   function sair(){
-    localStorage.removeItem("logado")
-    window.location.reload()
+  localStorage.removeItem("logado")
+  window.location.reload()
   }
 
   return (
@@ -42,14 +42,13 @@ function Menu() {
         <li><Link to="/Sobre">Sobre</Link></li>
         <li><Link to="/Compras">Compras</Link></li>
         <li><Link to="/Contato">Contato</Link></li>
-        <li><Link to="/cadastro">Cadastro</Link></li>
-        
 
-        {/* se NÃO estiver logado */}
+        {/* NÃO LOGADO */}
         {!logado && (
-          <li>
-            <Link to="/login">Login</Link>
-          </li>
+          <>
+            <li><Link to="/cadastro">Cadastro</Link></li>
+            <li><Link to="/login">Login</Link></li>
+          </>
         )}
 
         {/* se estiver logado */}

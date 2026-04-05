@@ -72,6 +72,9 @@ body {
 /* HOVER */
 .cardes:hover {
     transform: scale(1.05);
+    background: transparent; /* 👈 garante que não fique azul */
+
+    
 }
 
 /* 🔥 ISSO RESOLVE TUDO */

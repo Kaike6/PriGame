@@ -43,9 +43,14 @@ function Login() {
         ) {
             localStorage.setItem("logado", JSON.stringify(usuarioSalvo));
 
-            alert("Login realizado ✅");
+            navigate("/"); 
+                        alert("Login realizado ✅");
 
-            navigate("/");
+            
+        if (usuario) {
+            navigate("/"); // manda pra home
+        }
+
         } else {
             alert("Nome, email ou senha incorretos ❌");
         }
